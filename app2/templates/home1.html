@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="home">
+    
+    {% for i in data %}
+    <div class="article">
+        {{ forloop.counter }} article
+        <h2 class="article-title">{{ i.title | upper }}</h2>
+        <p class="article-desc">{{ i.desc | truncatewords:5 }}</p>
+        <div class="article-footer">
+            <a href="{% url 'update' i.id %}" class="btn-read">UPDATE</a>
+            <a href="{% url 'delete_' i.id %}" class="btn-read">DELETE</a>
+        </div>
+    </div>
+
+
+    {% endfor %}
+</div>
+
+{% endblock content %}
+
+
+
+

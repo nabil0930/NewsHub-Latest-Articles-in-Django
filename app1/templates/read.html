@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="article">
+    <h2 class="article-title">{{ article.title }}</h2>
+    <p class="article-desc">{{ article.desc }}</p>
+
+    <div class="article-footer">
+        <a href="{% url 'home' %}" class="btn-read">🔙BACK</a>
+    </div>
+</div>
+
+{% endblock content %}

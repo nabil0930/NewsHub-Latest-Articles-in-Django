@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+<h2>Add News Article</h2>
+
+<div class="forms">
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="title">TITLE : </label>
+        <input type="text" name="title" id="title" placeholder="Enter Title Here" required><br><br>
+
+        <label for="desc">DESC : </label>
+        <input type="text" name="desc" id="desc" placeholder="Enter desc Here" required><br><br>
+
+        <input type="submit" value="ADD ARTICLE" class="btn-read">
+    </form><hr>
+    <button type="button" class="btn btn-info"><a href="{% url 'home1' %}">back home</a></button>
+</div>
+</center>
+{% endblock content %}

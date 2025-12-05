@@ -1,0 +1,16 @@
+<nav>
+<div class="logo"><h2>ARTICLE</h2></div>
+    <div class="links">
+        {% if management %}
+        <a href="{% url 'home' %}">HOME</a>
+        <a href="{% url 'addnews' %}">ADD NEWS</a>
+        <a href="{% url 'home1' %}">MANAGE</a>
+        {% else %}
+        <a href="{% url 'home' %}">HOME</a>
+        <a href="{% url 'about' %}">ABOUT</a>
+         <a href="{% url 'home1' %}">MANAGE</a>
+
+        {% endif %}
+    </div>
+
+</nav>
