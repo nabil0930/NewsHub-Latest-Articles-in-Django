@@ -5,7 +5,7 @@
     
     {% for i in data %}
     <div class="article">
-        {{ forloop.counter }} article
+        <span><b><u>#{{ forloop.counter }}</u></b></span>
         <h2 class="article-title">{{ i.title | upper }}</h2>
         <p class="article-desc">{{ i.desc | truncatewords:5 }}</p>
         <div class="article-footer">
